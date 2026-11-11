@@ -1,0 +1,1 @@
+The SkCanvas::kIsOpaque_SaveLayerFlag serves as a performance-only hint and is not used by anyone except fuzzers. Fuzzers can exploit this flag to allocate uninitialized memory and treat it as opaque, leading to blending of uninitialized pixels and other unintended behaviors.

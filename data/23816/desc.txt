@@ -1,0 +1,1 @@
+A vulnerability exists in the URI scope parsing code in guri, where the parser can read past the end of a URI if it encounters an incorrect %-escaped character. This issue affects the handling of zone ID syntax as defined in RFC 6874, which amends RFC 3986. The vulnerability also impacts the correctness of network-address tests related to zone IDs.

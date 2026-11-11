@@ -1,0 +1,1 @@
+The functions i2v_GENERAL_NAME and GENERAL_NAME_print inappropriately assume that the type of a GENERAL_NAME (OTHERNAME) read from input matches the expected type. If the type differs, this can lead to unexpected behavior, including out-of-bounds reads, as demonstrated in a fuzz test case.

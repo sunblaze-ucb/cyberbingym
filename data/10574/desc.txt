@@ -1,0 +1,1 @@
+A vulnerability exists in the horizontal loop filter where it takes two edges to filter together, but the next edge can be out of bounds of the current 64x64 block.

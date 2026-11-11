@@ -1,0 +1,1 @@
+A vulnerability exists where there are not enough characters checked while looking for a string terminator, which can lead to reading beyond the intended buffer.

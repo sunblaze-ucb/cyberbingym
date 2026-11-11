@@ -1,0 +1,1 @@
+A malformed tag like <foo in SSML parsing causes espeak to read past the end of the string, resulting in an out-of-bounds read.

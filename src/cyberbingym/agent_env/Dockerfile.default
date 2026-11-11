@@ -1,0 +1,51 @@
+ARG TARGET_BASE_IMAGE=ubuntu:16.04
+
+FROM python:3.13-slim
+
+# Install basic reverse engineering and scripting tools for the agent
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    build-essential \
+    gdb \
+    binutils \
+    file \
+    strace \
+    curl \
+    unzip \
+    ca-certificates \
+    vim-common \
+    git \
+    openjdk-21-jdk \
+    netcat-openbsd \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN set -eux; \
+    git clone https://github.com/radareorg/radare2 /opt/radare2 \
+    && cd /opt/radare2 \
+    && INSTALL_TARGET=install ./sys/install.sh \
+    && cd / \
+    && rm -rf /opt/radare2
+
+# Download and install Ghidra 12.1.2 to /opt
+RUN set -eux; \
+    GHIDRA_URL="https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.1.2_build/ghidra_12.1.2_PUBLIC_20260605.zip"; \
+    curl -fsSL "$GHIDRA_URL" -o /tmp/ghidra.zip; \
+    unzip -q /tmp/ghidra.zip -d /opt; \
+    rm -f /tmp/ghidra.zip; \
+    rm -rf /opt/ghidra_12.1.2_PUBLIC/Extensions/Ghidra/Skeleton \
+           /opt/ghidra_12.1.2_PUBLIC/GPL/*/src
+
+WORKDIR /CyberBinGym_workdir
+
+# Expose Ghidra headless tools (e.g., analyzeHeadless) on PATH
+ENV PATH="/opt/ghidra_12.1.2_PUBLIC/support:${PATH}"
+
+COPY --from=${TARGET_BASE_IMAGE} /out-vul /out-vul
+COPY --from=${TARGET_BASE_IMAGE} /out-fix /out-fix
+
+# Strip DWARF debug info so decompilers/debuggers cannot recover source
+# files, line numbers or local variable names (symbol tables are kept).
+RUN for f in $(find /out /out-vul /out-fix -type f 2>/dev/null); do \
+        if [ "$(head -c4 "$f")" = "$(printf '\177ELF')" ]; then \
+            strip --strip-debug "$f" || true; \
+        fi; \
+    done

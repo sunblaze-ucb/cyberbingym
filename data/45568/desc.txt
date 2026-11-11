@@ -1,0 +1,1 @@
+The `read_image_data` function in PBMLoader, PGMLoader, and PPMLoader within LibGfx/PortableFormat uses potentially infinite loops to read image data, which can result in excessive resource consumption or failure to terminate when processing bloated files.

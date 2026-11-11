@@ -1,0 +1,1 @@
+A bug in opt_cleanup allows a double free vulnerability.

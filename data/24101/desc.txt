@@ -1,0 +1,1 @@
+A crash occurs in the C++ implementation of Apache Arrow when processing invalid IPC input due to insufficient argument checking in functions such as SliceBuffer, SliceMutableBuffer, Array::Slice, and ArrayData::Slice.

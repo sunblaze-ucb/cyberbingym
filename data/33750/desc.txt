@@ -1,0 +1,1 @@
+A double-free vulnerability exists in the JSON parser, which can lead to memory corruption or crashes.

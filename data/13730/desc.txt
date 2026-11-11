@@ -1,0 +1,1 @@
+A use after free vulnerability exists in gpg, specifically in g10/mainproc.c within the proc_plaintext function, where freed memory is accessed.

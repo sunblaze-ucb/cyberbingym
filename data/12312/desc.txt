@@ -1,0 +1,1 @@
+A vulnerability exists in the mort ContextualSubtable offset access in the AAT implementation, where improper handling of offsets can lead to incorrect memory access.

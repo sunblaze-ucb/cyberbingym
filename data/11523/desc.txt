@@ -1,0 +1,1 @@
+A vulnerability exists where the frame context is not set up using next_ref_frame_map, potentially leading to incorrect reference frame handling.

@@ -1,0 +1,1 @@
+A vulnerability exists in mesh-forwarder where a message being processed can be evicted if processing it triggers an Address Solicit message to be sent. Since Thread control messages have higher priority, the Address Solicit message can evict the original data message that caused its generation.

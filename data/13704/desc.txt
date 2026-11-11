@@ -1,0 +1,1 @@
+A double free vulnerability exists in bin_art due to improper management of ao->kv's ownership. The ownership of ao->kv is transferred to RBin through the get_sdb method of RBinPlugin, but plugins may still attempt to free it themselves.

@@ -1,0 +1,1 @@
+A null pointer dereference occurs in the legacy SAX1 parser when parsing in SAX1 mode due to the use of namePush instead of nameNsPush. The unprefixed name from namePush pollutes the global namespace, and namePush is unused and not suitable for client code.

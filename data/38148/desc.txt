@@ -1,0 +1,1 @@
+Statements containing malformed exists expressions in LibSQL, such as `INSERT INTO t(a) VALUES (SELECT 1)`, can cause the parser to crash.

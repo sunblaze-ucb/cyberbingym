@@ -1,0 +1,1 @@
+An arithmetic error in the ofpbuf_insert() function in ofpbuf causes the memmove byte count to be calculated incorrectly, because ofpbuf_put_uninit increases b->size by n. This results in an incorrect number of bytes being moved during buffer operations.

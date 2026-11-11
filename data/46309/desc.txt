@@ -1,0 +1,1 @@
+A potential overflow occurs in the CheckFile core reading function due to improper handling of file size calculations.

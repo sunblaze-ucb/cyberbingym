@@ -1,0 +1,1 @@
+A buffer overflow exists in the v0.2 and v0.4 raw literals decompression code in the legacy module.

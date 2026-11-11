@@ -1,0 +1,1 @@
+A vulnerability exists in the Stack component where there is no check for successful network layer allocation. This can lead to potential issues if the allocation fails.

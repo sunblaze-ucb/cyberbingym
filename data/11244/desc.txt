@@ -1,0 +1,1 @@
+A crash occurs in Parser::makeStream when handling malformed files.

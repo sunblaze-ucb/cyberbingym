@@ -1,0 +1,1 @@
+A vulnerability exists in the parsing of PROXY v2 headers where the buffer may not be large enough, potentially leading to buffer overflows.

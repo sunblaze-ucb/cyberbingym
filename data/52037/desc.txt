@@ -1,0 +1,1 @@
+A vulnerability exists in libgps/gpsutils.c within the safe_atof() function, where exponent overflow returns INFINITY (per C99) and underflow returns 0.0.

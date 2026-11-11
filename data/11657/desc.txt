@@ -1,0 +1,1 @@
+A vulnerability exists in the CFF implementation where the Charset handling allows for a buffer overrun.

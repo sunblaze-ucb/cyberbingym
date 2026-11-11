@@ -1,0 +1,31 @@
+[project]
+name = "cyberbingym"
+version = "0.1.0"
+description = "CyberBinGym: an Inspect benchmark for binary-analysis agents"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+urls = { Repository = "https://github.com/sunblaze-ucb/cyberbingym" }
+dependencies = [
+    "anthropic==1.0.0",
+    "docker>=7.1.0",
+    "inspect-ai==0.3.265",
+    "inspect-swe==0.2.70",
+    "openai==3.1.0",
+    "openai-agents>=0.17.5",
+    "requests>=2.32.4",
+]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project.entry-points.inspect_ai]
+cyberbingym = "cyberbingym.task"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+cyberbingym = ["agent_env/Dockerfile.*", "agent_env/*.conf", "agent_env/*.c"]

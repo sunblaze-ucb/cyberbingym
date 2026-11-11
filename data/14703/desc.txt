@@ -1,0 +1,1 @@
+A heap-buffer-overflow vulnerability exists in KAr::openArchive when handling broken files with a negative size value. If the size is negative, the function continues processing, which can lead to memory corruption.

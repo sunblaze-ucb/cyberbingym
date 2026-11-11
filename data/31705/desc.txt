@@ -1,0 +1,1 @@
+A null-dereference read occurs when attempting to free a chunk that has already been freed, leading to a security vulnerability.

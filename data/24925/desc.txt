@@ -1,0 +1,1 @@
+A regression in xmlXIncludeLoadFallback allows processing of already freed nodes if text nodes are merged after deleting nodes with an empty fallback.

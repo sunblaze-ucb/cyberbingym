@@ -1,0 +1,1 @@
+A security vulnerability exists in the DrawImage() function due to insufficient MVG parser validations.

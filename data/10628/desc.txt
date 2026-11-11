@@ -1,0 +1,1 @@
+A crash occurs in the reference version of 1and0 padding in the mode padding fuzzer when processing an all-zero input.

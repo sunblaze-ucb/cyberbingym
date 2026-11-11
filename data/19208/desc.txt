@@ -1,0 +1,1 @@
+A vulnerability exists in coolkey where the object ID is not ensured to be unique when filling the list, potentially leading to issues with object identification.

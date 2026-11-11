@@ -1,0 +1,1 @@
+A vulnerability exists in ReadMNGImage() where the mng_LOOP chunk is not validated to be at least 5 bytes long.

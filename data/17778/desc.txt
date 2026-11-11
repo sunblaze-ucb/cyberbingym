@@ -1,0 +1,1 @@
+The vulnerability occurs when stack memory that is not initialized is used, which can lead to unpredictable behavior or security issues.

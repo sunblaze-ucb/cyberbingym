@@ -1,0 +1,1 @@
+A vulnerability exists in the destruction of standalone forms where passing the Dict to Object() does not increase the reference count. This leads to an extra unref operation during destruction, causing a crash due to an insufficient reference count.

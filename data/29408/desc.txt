@@ -1,0 +1,1 @@
+A double-free problem exists in the igraph_read_graph_gml function.

@@ -1,0 +1,1 @@
+An inconsistent memory allocation occurs in parser creation, specifically in the flb_parser_create function in the parser file, where memory provided by the caller may be freed, leading to potential security vulnerabilities.

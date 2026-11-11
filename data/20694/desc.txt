@@ -1,0 +1,1 @@
+The vulnerability allows CRAM compression headers to have negative ref_seq_start values, which can trigger buffer read overruns in the MD5 calculation code and potentially other areas.

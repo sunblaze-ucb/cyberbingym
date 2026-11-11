@@ -1,0 +1,1 @@
+The HTML parser does not reset its input before reporting an error, which can lead to use-after-free issues. Additionally, the function xmlBufSetInputBaseCur may not set valid pointers in case of buffer errors, potentially causing further problems.

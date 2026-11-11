@@ -1,0 +1,1 @@
+LibGfx incorrectly assumes that a scan includes all components for the image. A scan can contain fewer components than the full image, and if there are multiple components, they must follow the ordering of the frame header. This can lead to improper handling when looping over image components and skipping those that do not correspond.

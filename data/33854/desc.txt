@@ -1,0 +1,1 @@
+A security vulnerability exists in the Shell where non-bareword nodes are allowed as part of a heredoc key.

@@ -1,0 +1,1 @@
+The vulnerability occurs because conn->data is not explicitly set to point to the current transfer when invoking the protocol-specific disconnect function in the disconnect process. This can cause the disconnect function to not work correctly.

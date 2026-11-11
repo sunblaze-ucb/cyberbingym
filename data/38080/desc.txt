@@ -1,0 +1,1 @@
+A vulnerability exists in core: parse_to_param() where the function does not check for the end of data when encountering an escape character or the start of a value.

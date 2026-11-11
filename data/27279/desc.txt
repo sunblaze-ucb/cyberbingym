@@ -1,0 +1,1 @@
+A security vulnerability exists in the http_client component where, upon a proxy parse exception, the linked buffer is released inappropriately in the relevant function.

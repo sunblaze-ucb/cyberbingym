@@ -1,0 +1,1 @@
+The isMatchAtCPBoundary function in ICU contains a vulnerability where it uses an uninitialized value, leading to potential undefined behavior. This issue is detected by fuzz testing and can be observed in the custrtst test suite.

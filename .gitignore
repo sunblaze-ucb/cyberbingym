@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+evals/
+logs/
+poc_artifacts/
+tmp/
+*.eval
+result_*
+.vscode
+.pytest_cache/
+build/
+dist/
+*.egg-info/

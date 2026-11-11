@@ -1,0 +1,1 @@
+A read-beyond-buffer vulnerability exists in the VCF code where the write logic only checks the upper range of z->key without accounting for its signedness.

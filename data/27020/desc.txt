@@ -1,0 +1,1 @@
+ECC key sizes less than 224 bits are enabled by default, allowing the use of weak ECC curves. The option to enable smaller key sizes is controlled by `--enable-eccweakcurves` or `ECC_WEAK_CURVES`, and is automatically enabled if `WOLFSSL_MIN_ECC_BITS` is set to less than 224 bits.

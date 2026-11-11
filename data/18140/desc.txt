@@ -1,0 +1,1 @@
+The fuzzer contains an off by one error, passing an incorrect length to the CharReader::parse method in a way that results in a heap buffer overflow.

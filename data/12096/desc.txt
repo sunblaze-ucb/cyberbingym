@@ -1,0 +1,1 @@
+A memory leak occurs in `h2o_http2_scheduler_relocate` when `src` has no children.

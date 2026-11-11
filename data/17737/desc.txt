@@ -1,0 +1,1 @@
+A use-after-free vulnerability exists in xmlTextReaderFreeNodeList, where xmlTextReaderFreeDoc frees entities before freeing entity references via xmlTextReaderFreeNodeList, leading to a use-after-free read.

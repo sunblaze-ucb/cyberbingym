@@ -1,0 +1,1 @@
+A vulnerability exists in HTTP/2 where invalid stream identifiers are not properly rejected, potentially allowing protocol violations without triggering a PROTOCOL_ERROR.

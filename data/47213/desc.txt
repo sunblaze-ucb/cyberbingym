@@ -1,0 +1,1 @@
+A vulnerability exists where the pointer on the VM stack is not adjusted after calling `mrb_stack_extend()` if necessary, potentially leading to incorrect stack behavior.

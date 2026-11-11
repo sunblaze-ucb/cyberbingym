@@ -1,0 +1,1 @@
+A bug exists where the wrong xref subsection entry is initialized.

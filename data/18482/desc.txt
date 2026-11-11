@@ -1,0 +1,1 @@
+A vulnerability exists in pkcs15-prkey where memory is not properly cleaned after a failure, potentially exposing sensitive data.

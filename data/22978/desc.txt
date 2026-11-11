@@ -1,0 +1,1 @@
+The vulnerability is that the gets() function in LibRaw_buffer_datastream does not always return a 0-terminated string, which can lead to issues in functions such as parse_rollei.

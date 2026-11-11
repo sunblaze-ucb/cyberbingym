@@ -1,0 +1,1 @@
+An off-by-one error in the loop bounds check in the TranslateTextEx() function allows a one-byte stack write overflow.

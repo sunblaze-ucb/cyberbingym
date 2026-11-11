@@ -1,0 +1,1 @@
+An invalid cast occurs when a variable-length bytearray field is decoded as Decimal256 Arrow data in the Parquet C++ implementation. This can lead to incorrect processing of Parquet data containing Decimal256 types.

@@ -1,0 +1,1 @@
+A security vulnerability exists in the Ip6::Address::FromString function in the ip6 module, where insufficient parse validation allows malformed input to be incorrectly processed.

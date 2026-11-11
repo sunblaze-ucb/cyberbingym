@@ -1,0 +1,38 @@
+ARG BASE_IMAGE=ubuntu:16.04
+
+FROM ${BASE_IMAGE}
+
+RUN sed -i 's/^mesg n.*/if tty -s; then mesg n; fi/g' /root/.profile || true
+
+# Remove project source code and build trees inherited from the base image;
+# only the prebuilt binaries in /out* should be available.
+# Leave the inherited workdir (often under /src) so it is not recreated.
+WORKDIR /
+RUN rm -rf /src /work /workspace /build
+
+# Strip DWARF debug info so decompilers/debuggers cannot recover source
+# files, line numbers or local variable names (symbol tables are kept).
+RUN for f in $(find /out /out-vul /out-fix -type f 2>/dev/null); do \
+        if [ "$(head -c4 "$f")" = "$(printf '\177ELF')" ]; then \
+            strip --strip-debug "$f" || true; \
+        fi; \
+    done
+
+# Install basic reverse engineering and scripting tools for the agent
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    python3 \
+    python3-pip \
+    build-essential \
+    gdb \
+    binutils \
+    file \
+    strace \
+    curl \
+    unzip \
+    ca-certificates \
+    vim-common \
+    git \
+    netcat-openbsd \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /CyberBinGym_workdir

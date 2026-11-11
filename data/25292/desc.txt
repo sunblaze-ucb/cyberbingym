@@ -1,0 +1,1 @@
+A stack-buffer-overflow occurs in the stream_write_key function when processing input in rnp:fuzz_keyring.

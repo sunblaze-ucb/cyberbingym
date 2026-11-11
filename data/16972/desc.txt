@@ -1,0 +1,1 @@
+A vulnerability exists where SBR data is not discarded in the case of an unsuccessful SBR header update, potentially leading to incorrect processing or use of invalid data.
